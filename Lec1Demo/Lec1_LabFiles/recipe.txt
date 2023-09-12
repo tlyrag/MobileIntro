@@ -1,0 +1,13 @@
+Use separate TextViews for each line so that you can get practice adding views, changing needed properties and adding constraints
+
+Bruschetta Recipe
+Ingredients
+
+4 plum tomatoes
+6 basil leaves
+3 garlic cloves, chopped
+3 TB olive oil
+
+Directions
+
+Combine the ingredients and add salt to taste. Top French bread slices with mixture.
