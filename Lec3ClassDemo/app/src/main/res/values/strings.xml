@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Lec3Demo</string>
+    <string name="txtTitle">Concert Booking</string>
+    <string name="txtHintTicket">Number of Tickets</string>
+    <string name="txtPrompt">Concert Type\n</string>
+    <string name="txtBookConcert">Book Concert</string>
+    <string name="txtConcertImgDescription" />
+    <string-array name="concertTypes">
+        <item>Rock Band</item>
+        <item>Blues Band</item>
+        <item>Jazz Band</item>
+    </string-array>
 </resources>
