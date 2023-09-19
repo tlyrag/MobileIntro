@@ -9,4 +9,10 @@
     <string name="txtDirections">Directions</string>
     <string name="txtDirectionsInstructions">Combine the ingredients and add salt to taste. Top French bread slices with mixture</string>
     <string name="btnBack">Back</string>
+    <string name="txtTitle2" >Bruschetta Recipie</string>>
+    <string name="txtIngredTitle" >Ingredients</string>>
+    <string name="txtIngred1" >4 Plum Tomatoes</string>>
+    <string name="txtIngred2">6 basil leaves</string>
+    <string name="txtDirectionsTitle">Directions</string>
+    <string name="txtDirectionsInstr">Combin the ingredients and add salt to taste.Top French bread slices with mixture</string>
 </resources>
