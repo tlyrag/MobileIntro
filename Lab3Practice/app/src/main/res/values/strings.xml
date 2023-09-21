@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PracticingLab3</string>
+    <string name="txtTitle">Concert Selector</string>
+    <string name="imgTxtDescription" />
+    <string name="btnTxtPurchase">Purchase</string>
+    <string-array name="concertsArray" >
+        <item> Rock Band</item>
+        <item> Jazz Band</item>
+        <item> Blue Band</item>
+    </string-array>
+</resources>
