@@ -45,9 +45,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         purchaseBtn.setOnClickListener(view -> {
-            int numTix = getNumTix(numOfTix);
-            finalPrice =getFinalPrice(numTix);
-            Toast.makeText(this, "Total Amount is " + finalPrice, Toast.LENGTH_SHORT).show();
+
+                int numTix = getNumTix(numOfTix);
+                finalPrice =getFinalPrice(numTix);
+                if(finalPrice!=0) {
+                    Toast.makeText(this, "Total Amount is " + finalPrice, Toast.LENGTH_SHORT).show();
+                }
+
+
+
         });
     }
 
@@ -87,12 +93,14 @@ public class MainActivity extends AppCompatActivity {
             int numberOfTix = Integer.parseInt(numberOfTixText);
             if(numberOfTix<0) {
                 String exceptionMessage = "Number of Tickets cannot be lesser than 0";
-                Toast.makeText(MainActivity.this, "exceptionMessage", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, exceptionMessage, Toast.LENGTH_SHORT).show();
                 throw new Exception(exceptionMessage);
             }
             return numberOfTix;
         } catch (Exception err) {
             Log.d(TAG,"Error: " + err.getMessage());
+            String exceptionMessage = "Number of Tickets cannot be lesser than 0 and must be a Number";
+            Toast.makeText(MainActivity.this, exceptionMessage, Toast.LENGTH_SHORT).show();
             return 0;
         }
     }
