@@ -2,6 +2,7 @@ package com.example.lec3demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -75,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
                     // CREATE A BUNDLE OF DATA
                     // Create intent and put it in the intent object
                     // Use the intent to start next activity
+
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("NUMTIX",numTix);
+                    bundle.putString("TYPE",spinnerConcertType.getSelectedItem().toString());
+                    bundle.putDouble("COST",cost);
+                    Intent myResultsIntent = new Intent(MainActivity.this,ResultActivity.class);
+
+                    myResultsIntent.putExtras(bundle);
+                    startActivity(myResultsIntent);
 
                 } catch (Exception err) {
                     err.printStackTrace();
