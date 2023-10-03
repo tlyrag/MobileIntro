@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lec5</string>
+    <string name="imgSplash">Bag Pipes</string>
+    <string name="txtTitle">Audio Title</string>
 </resources>
