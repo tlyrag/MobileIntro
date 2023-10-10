@@ -19,7 +19,7 @@ import kotlin.jvm.Throws;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG =  "App Error";
     static int selectedConcertId = 0;
-     static double finalPrice =0;
+    static double finalPrice =0;
 
 
     @Override
