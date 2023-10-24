@@ -1,0 +1,6 @@
+101,"Gorilla",R.drawable.gorilla
+102,"Panda",R.drawable.panda
+103,"Eagle",R.drawable.eagle
+104,"Panther",R.drawable.panther
+105,"Polar Bear",R.drawable.polar
+106,"Elephant",R.drawable.elephant
