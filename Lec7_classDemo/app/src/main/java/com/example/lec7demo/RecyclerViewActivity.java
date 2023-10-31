@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public class RecyclerViewActivity extends AppCompatActivity implements imgRecyclerAdapter.OnItemClickListener{
     List<GalleryImg> imgList = new ArrayList<>();
-    int id;
+    int selectedInd;
     ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class RecyclerViewActivity extends AppCompatActivity implements imgRecycl
         img = findViewById(R.id.imageViewLarge2);
 
         addData();
+
+        SharedPreferences preferences = this.getPreferences(Context.MODE_PRIVATE);
+        selectedInd = preferences.getInt(getString(R.string.txtImgInd),-1);
         //imgRecyclerAdapter adpt = new imgRecyclerAdapter(imgList);
 //        imgRecyclerAdapter adpt = new imgRecyclerAdapter(imgList, new imgRecyclerAdapter.OnItemClickListener() {
 //            @Override
@@ -48,14 +53,18 @@ public class RecyclerViewActivity extends AppCompatActivity implements imgRecycl
         recyclerView.setAdapter(adpt);recyclerView.setLayoutManager(gm);
         //recyclerView.setLayoutManager(lm);
 
-
+        if(selectedInd!=-1) {
+            img.setImageResource(imgList.get(selectedInd).getImgPic());
+        } else {
+            img.setImageResource(0);
+        }
 
 
 
         btnShowImage.setOnClickListener((View view)  -> {
-            id  = adpt.getSelectedInd();
-            if(id!=-1) {
-                img.setImageResource(imgList.get(id).getImgPic());
+            int index = adpt.getSelectedInd();
+            if(index!=-1) {
+                img.setImageResource(imgList.get(index).getImgPic());
             }
 
 
@@ -78,7 +87,17 @@ public class RecyclerViewActivity extends AppCompatActivity implements imgRecycl
     @Override
     public void onItemClick(int i) {
         if(i!=-1) {
+                selectedInd=i;
                    img.setImageResource(imgList.get(i).getImgPic());
               }
+    }
+
+    @Override
+    protected void onPause() {
+        SharedPreferences preferences = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt(getString(R.string.txtImgInd),selectedInd);
+        editor.apply();
+        super.onPause();
     }
 }
