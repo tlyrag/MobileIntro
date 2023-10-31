@@ -94,4 +94,5 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="txtTitle2">Recicler View</string>
+    <string name="btnShowImg">Show Image</string>
 </resources>
