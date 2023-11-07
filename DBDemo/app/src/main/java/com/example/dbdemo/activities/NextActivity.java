@@ -1,8 +1,10 @@
-package com.example.dbdemo;
+package com.example.dbdemo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.dbdemo.R;
 
 public class NextActivity extends AppCompatActivity {
 
