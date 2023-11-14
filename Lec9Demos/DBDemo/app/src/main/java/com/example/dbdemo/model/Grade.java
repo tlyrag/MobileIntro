@@ -3,8 +3,16 @@ package com.example.dbdemo.model;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Index;
 
-@Entity(tableName = "grades")
+@Entity(tableName = "grades", primaryKeys = {"courseid","studentid"}
+        ,foreignKeys = @ForeignKey(
+                entity = Student.class,parentColumns = "studentid",
+                childColumns = "studentid",
+                onDelete = ForeignKey.CASCADE)
+        ,indices = {@Index("studentid")}
+        )
 public class Grade {
     @NonNull
     @ColumnInfo(name="courseid")
