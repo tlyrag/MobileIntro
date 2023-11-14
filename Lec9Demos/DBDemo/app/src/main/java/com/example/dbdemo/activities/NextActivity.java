@@ -43,6 +43,9 @@ public class NextActivity extends AppCompatActivity {
                 outputText.append(String.format("%-10s-%-10s%-10.2f",grade.getCourseId(),grade.getStudentID(),grade.getStudGrade()));
 
             }
+            int retValue = cdb.studentDao().deleteStudentWithId("312345");
+
+
             runOnUiThread(() -> {
                 binding.txtViewSummary.setText(outputText);
             });
