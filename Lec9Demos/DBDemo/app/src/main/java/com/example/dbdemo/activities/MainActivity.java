@@ -1,6 +1,7 @@
 package com.example.dbdemo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.util.Log;
 //import com.example.dbdemo.R;
 import com.example.dbdemo.R;
 import com.example.dbdemo.adapters.StudentAdapter;
+import com.example.dbdemo.databases.CollegeDatabase;
 import com.example.dbdemo.databinding.ActivityMainBinding;
 import com.example.dbdemo.model.Student;
 
@@ -17,9 +19,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
     List<Student> StudentList = new ArrayList<>();
+    CollegeDatabase cdb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +37,26 @@ public class MainActivity extends AppCompatActivity {
         StudentList = ReadStudentCSV();
         Log.d("DBDEMO",StudentList.size() + " Students in the file");
 
-        binding.listViewStudents.setAdapter(new StudentAdapter(StudentList));
+        //binding.listViewStudents.setAdapter(new StudentAdapter(StudentList));
+
+        cdb = Room.databaseBuilder(getApplicationContext(),CollegeDatabase.class,"college.db").build();
+        insertDatabase(binding);
+
+
+
 
     }
+    private void insertDatabase(ActivityMainBinding binding) {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.execute(() -> {
+            cdb.studentDao().insertStudentFromList(StudentList);
+            List<Student> StudentsFromDB = cdb.studentDao().GetAllStudents();
+            runOnUiThread(() -> {
+                binding.listViewStudents.setAdapter(new StudentAdapter(StudentsFromDB));
+            });
 
+        });
+    }
     private List<Student> ReadStudentCSV(){
         List<Student> Students = new ArrayList<>();
         InputStream inputStream = getResources()
