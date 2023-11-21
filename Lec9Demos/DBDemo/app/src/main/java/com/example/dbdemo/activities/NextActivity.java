@@ -12,6 +12,7 @@ import com.example.dbdemo.R;
 import com.example.dbdemo.databases.CollegeDatabase;
 import com.example.dbdemo.databinding.ActivityNextBinding;
 import com.example.dbdemo.model.Grade;
+import com.example.dbdemo.model.StudGradeTuple;
 import com.example.dbdemo.model.Student;
 
 import java.lang.reflect.Array;
@@ -48,8 +49,6 @@ public class NextActivity extends AppCompatActivity {
 
 
 
-            List<Grade> AllGrades = cdb.gradeDao().GetAllGrades();
-
 
             for(Student student:Students) {
 
@@ -58,7 +57,7 @@ public class NextActivity extends AppCompatActivity {
             }
             outputText.append("Displaying Grades.....\n");
             outputText.append(String.format("%-10s%-10s%-10s","CourseId \n","StudId","Grade"));
-
+            List<Grade> AllGrades = cdb.gradeDao().GetAllGrades();
             for(Grade grade:AllGrades) {
                 outputText.append(String.format("%-10s%-10s%-10.2f \n",grade.getCourseId(),grade.getStudentID(),grade.getStudGrade()));
             }
@@ -73,7 +72,7 @@ public class NextActivity extends AppCompatActivity {
 
             outputText.append("Displaying Grades.....\n");
             outputText.append(String.format("%-10s%-10s%-10s \n","CourseId ","StudId","Grade"));
-
+            AllGrades = cdb.gradeDao().GetAllGrades();
             for(Grade grade:AllGrades) {
                 outputText.append(String.format("%-10s%-10s%-10.2f \n",grade.getCourseId(),grade.getStudentID(),grade.getStudGrade()));
             }
@@ -82,10 +81,20 @@ public class NextActivity extends AppCompatActivity {
             Log.d(TAG, "onCreate: Updated Records increased for one student " + retUpdate2);
             outputText.append("Displaying Grades.....\n");
             outputText.append(String.format("%-10s%-10s%-10s \n","CourseId","StudId","Grade"));
-
+             AllGrades = cdb.gradeDao().GetAllGrades();
             for(Grade grade:AllGrades) {
                 outputText.append(String.format("%-10s%-10s%-10.2f \n",grade.getCourseId(),grade.getStudentID(),grade.getStudGrade()));
             }
+
+            outputText.append("\n\n Displaying stud name and grade.. \n\n");
+
+            List<StudGradeTuple> StudNamesAndGrades = cdb.studentGradeDao().GetStudentNameAndGrades();
+
+            outputText.append(String.format("%-10s%-10s \n","Name","Grade"));
+            for(StudGradeTuple grade:StudNamesAndGrades) {
+                outputText.append(String.format("%-10s%-10s \n",grade.getStudName(),grade.getStudGrade()));
+            }
+
             runOnUiThread(() -> {
                 binding.txtViewSummary.setText(outputText);
             });
