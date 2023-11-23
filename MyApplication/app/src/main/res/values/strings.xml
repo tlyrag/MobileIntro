@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="txtViewLoading">Loading</string>
+    <string name="txtViewTitle"> Play Music </string>
+    <string name="btnGoToDog">DogPage</string>
+    <string name="btnGoToPlay">PlayPage</string>
+    <string name="imgViewPlayStop">PlayStopImage</string>
+    <string name="imgViewSongTitle">SongTitle Image</string>
+</resources>
