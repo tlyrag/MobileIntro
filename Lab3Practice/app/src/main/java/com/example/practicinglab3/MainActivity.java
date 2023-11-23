@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     static int selectedConcertId = 0;
     static double finalPrice =0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

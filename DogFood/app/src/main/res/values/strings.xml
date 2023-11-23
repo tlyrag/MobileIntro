@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DogFood</string>
+    <string name="txtViewBookStoreTitle">Book Store</string>
+    <string name="txtViewBookTitle">Title:\n</string>
+    <string name="txtViewBookAuthor">Author:</string>
+    <string name="txtViewBookGenre">Genre:</string>
+    <string name="txtViewBookPrice">Price:\n</string>
+    <string name="txtViewBookStock">Stock:</string>
+    <string name="btnAddToCart">Add to Cart</string>
+    <string name="btnClearCart">Clear Cart</string>
+    <string name="btnPurchase">Purchase</string>
+    <string name="radioBtnNormalDelivery">Normal Delivery</string>
+    <string name="radioBtnFastDelivery">Fast Delivery</string>
+    <string name="txtViewFinalPrice">Final Price:</string>
+    <string-array name="bookNames">
+        <item>Great Gatsby</item>
+        <item>Lord of the Rings</item>
+        <item>Harry Potter</item>
+        <item>Wheel of Time</item>
+        <item>Game of Thrones</item>
+    </string-array>
+</resources>
