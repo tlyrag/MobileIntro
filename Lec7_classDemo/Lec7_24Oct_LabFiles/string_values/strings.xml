@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lec8GridViewDemo</string>
+    <string name="txtTitle">Picture Gallery</string>
+    <string name="imgLargeDesc">Large Image</string>
+</resources>
