@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\tlyra\\.gradle\\daemon\\8.0\\com.example.finalpractice2.app-mergeDebugResources-33:\\layout\\layout_galleryitem.xml",
+        "source": "C:\\Users\\tlyra\\.gradle\\daemon\\8.0\\com.example.finalpractice2.app-main-36:\\layout\\layout_galleryitem.xml"
+    },
+    {
+        "merged": "C:\\Users\\tlyra\\.gradle\\daemon\\8.0\\com.example.finalpractice2.app-mergeDebugResources-33:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\tlyra\\.gradle\\daemon\\8.0\\com.example.finalpractice2.app-main-36:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.finalpractice2.app-mergeDebugResources-33:/layout/activity_next.xml",
+        "source": "com.example.finalpractice2.app-main-36:/layout/activity_next.xml"
+    }
+]

@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable bunnysplash
+drawable eagle
+drawable elephant
+drawable gorilla
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable panda
+drawable panther
+drawable polar
+id RecyclerViewAnimal
+id imageViewAnimal
+id imgViewExtItem
+id imgViewLarge
+id textViewDob
+id textViewName
+id textViewPrice
+id txtViewExtItem
+id txtViewTitle
+layout activity_main
+layout activity_next
+layout layout_galleryitem
+mipmap ic_launcher
+mipmap ic_launcher_round
+raw animals
+string app_name
+string txtTitle
+style Base.Theme.FinalPractice2
+style Theme.FinalPractice2
+xml backup_rules
+xml data_extraction_rules
