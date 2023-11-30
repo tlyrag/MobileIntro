@@ -4,7 +4,15 @@ public class Student {
 
    String name;
    String course;
-   Double grade;
+   String Department;
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(String department) {
+        Department = department;
+    }
 
     public String getName() {
         return name;
@@ -22,18 +30,11 @@ public class Student {
         this.course = course;
     }
 
-    public Double getGrade() {
-        return grade;
-    }
 
-    public void setGrade(Double grade) {
-        this.grade = grade;
-    }
-
-    public Student(String name, String course, Double grade) {
+    public Student(String name, String course, String department) {
         this.name = name;
         this.course = course;
-        this.grade = grade;
+        Department = department;
     }
 
     @Override
@@ -41,7 +42,9 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", course='" + course + '\'' +
-                ", grade=" + grade +
+                ", Department='" + Department + '\'' +
                 '}';
     }
+
+
 }
