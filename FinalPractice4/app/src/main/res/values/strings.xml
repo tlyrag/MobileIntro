@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">FinalPractice4</string>
+    <string name="txtCacheName">CacheName</string>
+    <string name="txtCacheDob">CacheDob</string>
     <string-array name="animalNames">
         <item>eagle</item>
         <item>elephant</item>

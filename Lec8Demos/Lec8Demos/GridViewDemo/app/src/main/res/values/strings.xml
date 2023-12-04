@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GridViewDemo</string>
+    <string name="txtTitle">Picture Gallery</string>
+    <string name="imgLargeDesc">Large Image</string>
+    <string name="txtTitle2">Recycler View Images</string>
+    <string name="txtShowImage">Show Image</string>
+    <string name="txtImgInd">IMGIND</string>
+</resources>
