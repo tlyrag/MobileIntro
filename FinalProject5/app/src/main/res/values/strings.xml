@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FinalProject5</string>
+    <string-array name="animalNames">
+        <item>Eagle</item>
+        <item>Elephant</item>
+        <item>Gorilla</item>
+        <item>Panda</item>
+        <item>Panther</item>
+        <item>Polar</item>
+    </string-array>
+</resources>
