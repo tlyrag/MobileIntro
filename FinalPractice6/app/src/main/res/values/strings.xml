@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FinalPractice6</string>
+    <string-array name="animalNames">
+        <item>eagle</item>>
+        <item>elephant</item>>
+        <item>gorilla</item>>
+        <item>panda</item>>
+        <item>panther</item>>
+        <item>polar</item>>
+    </string-array>
+</resources>

@@ -1,0 +1,6 @@
+101,"Gorilla",gorilla
+102,"Panda",panda
+103,"Eagle",eagle
+104,"Panther",panther
+105,"Polar Bear",polar
+106,"Elephant",elephant
